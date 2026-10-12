@@ -1,0 +1,23 @@
+# AOSP & Build Artifacts
+out/
+.repo/
+*.img
+*.zip
+*.tar
+*.gz
+*.lz4
+ccache/
+firmware/extracted/
+firmware/payload.bin
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# OS & Editor generated files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
