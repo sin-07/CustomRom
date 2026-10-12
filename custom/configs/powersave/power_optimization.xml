@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Custom ROM Battery Optimization & Doze Profile for Nothing Phone (2a) Plus (MT6886)
+-->
+<config>
+    <!-- Aggressive Doze Whitelist Management -->
+    <!-- Idle timeout threshold reductions to enter deep sleep faster -->
+    <fraction name="device_idle_inactive_to_ms">180000</fraction>
+    <fraction name="device_idle_sensing_to_ms">0</fraction>
+    <fraction name="device_idle_locating_to_ms">30000</fraction>
+    <fraction name="device_idle_location_accuracy_m">20.0</fraction>
+    <fraction name="device_idle_motion_inactive_to_ms">0</fraction>
+    <fraction name="device_idle_idle_after_inactive_to_ms">0</fraction>
+    <fraction name="device_idle_idle_pending_to_ms">120000</fraction>
+    <fraction name="device_idle_max_idle_pending_to_ms">300000</fraction>
+    <fraction name="device_idle_idle_pending_factor">2.0</fraction>
+    <fraction name="device_idle_idle_to_ms">1800000</fraction>
+    <fraction name="device_idle_max_idle_to_ms">21600000</fraction>
+    <fraction name="device_idle_idle_factor">2.0</fraction>
+    <fraction name="device_idle_min_time_to_alarm_ms">3600000</fraction>
+    <fraction name="device_idle_max_temp_app_allowlist_duration_ms">10000</fraction>
+</config>
