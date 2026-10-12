@@ -1,0 +1,15 @@
+# Goodix / optical fingerprint sensor nodes
+/dev/goodix_fp                                                 u:object_r:fingerprint_device:s0
+/sys/devices/platform/1100a000\.spi/spi_master/spi0/spi0\.0/.*  u:object_r:sysfs_fingerprint:s0
+
+# Nothing Glyph Interface sysfs nodes
+/sys/class/leds/aw210xx_led(/.*)?                              u:object_r:sysfs_glyph:s0
+
+# Vendor HAL service binaries
+/vendor/bin/hw/android\.hardware\.lights-service\.nothing_glyph  u:object_r:hal_glyph_default_exec:s0
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.nothing u:object_r:hal_fingerprint_default_exec:s0
+
+# Runtime data directories
+/data/vendor/biometrics(/.*)?                                  u:object_r:biometrics_vendor_data_file:s0
+/data/vendor/goodix(/.*)?                                      u:object_r:biometrics_vendor_data_file:s0
+/data/vendor/glyph(/.*)?                                       u:object_r:glyph_vendor_data_file:s0
