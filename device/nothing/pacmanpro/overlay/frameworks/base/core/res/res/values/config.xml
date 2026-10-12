@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+** Copyright (C) 2026 The Android Open Source Project
+** SPDX-License-Identifier: Apache-2.0
+*/
+-->
+<resources>
+    <!-- Flag indicating whether the device has a centered punch hole display cutout -->
+    <string translatable="false" name="config_mainBuiltInDisplayCutout">
+        M -28,0
+        M 0,20
+        A 28,28 0 1,0 0,76
+        A 28,28 0 1,0 0,20
+        Z
+    </string>
+
+    <!-- Rounded corner radius for 6.7" AMOLED display -->
+    <dimen name="rounded_corner_radius">60px</dimen>
+    <dimen name="rounded_corner_radius_top">60px</dimen>
+    <dimen name="rounded_corner_radius_bottom">60px</dimen>
+
+    <!-- Status bar height accounting for camera cutout -->
+    <dimen name="status_bar_height_portrait">104px</dimen>
+
+    <!-- Minimum and peak refresh rates (120Hz OLED panel) -->
+    <integer name="config_defaultRefreshRate">120</integer>
+    <integer name="config_defaultPeakRefreshRate">120</integer>
+
+    <!-- Support for ambient display and wake gestures -->
+    <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
+    <bool name="config_displayBlanksAfterDoze">false</bool>
+    <bool name="config_supportDoubleTapWake">true</bool>
+
+    <!-- Under-display optical fingerprint sensor (UDFPS) characteristics -->
+    <integer-array name="config_udfps_sensor_props">
+        <!-- Sensor type: 2 (optical) -->
+        <item>2</item>
+        <!-- Sensor location X center (pixels) for 1080x2412 screen -->
+        <item>540</item>
+        <!-- Sensor location Y center (pixels) -->
+        <item>1954</item>
+        <!-- Sensor radius (pixels) -->
+        <item>92</item>
+    </integer-array>
+
+    <!-- Vibrator / Haptic Feedback effects -->
+    <bool name="config_useCustomVibrateForCallIfPossible">true</bool>
+
+    <!-- Device power profiles and battery saver -->
+    <integer name="config_criticalBatteryWarningLevel">5</integer>
+    <integer name="config_lowBatteryWarningLevel">15</integer>
+    <bool name="config_battery_saver_sticky_disabled">true</bool>
+
+    <!-- Enable 5G Standalone and Non-Standalone networks -->
+    <string-array name="networkAttributes" translatable="false">
+        <item>wifi,1,1,1,-1,true</item>
+        <item>mobile,0,0,0,-1,true</item>
+        <item>mobile_mms,2,0,2,60000,true</item>
+        <item>mobile_supl,3,0,2,60000,true</item>
+        <item>mobile_dun,4,0,2,60000,true</item>
+        <item>mobile_hipri,5,0,3,60000,true</item>
+        <item>mobile_ims,11,0,2,-1,true</item>
+        <item>mobile_cbs,12,0,2,60000,true</item>
+        <item>bluetooth,7,7,2,-1,true</item>
+        <item>ethernet,9,9,9,-1,true</item>
+    </string-array>
+</resources>
