@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Custom UI Styling and Branding Overlays
+-->
+<resources>
+    <!-- Default window animation scale: 0.85x for ultra-responsive fluidity -->
+    <fraction name="config_windowAnimationScale">85%</fraction>
+    <fraction name="config_transitionAnimationScale">85%</fraction>
+    <fraction name="config_animatorDurationScale">85%</fraction>
+
+    <!-- Custom device name displayed in Settings -->
+    <string name="config_defaultDeviceName" translatable="false">Nothing Phone (2a) Plus (AetherOS)</string>
+
+    <!-- Enforce system dark mode as default -->
+    <bool name="config_nightDisplayAvailable">true</bool>
+
+    <!-- Smooth scrolling physics tuning -->
+    <item name="config_viewFriction" format="float" type="dimen">0.012</item>
+    <item name="config_scrollingCache" format="boolean" type="bool">true</item>
+</resources>
