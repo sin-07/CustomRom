@@ -1,0 +1,15 @@
+# Android fstab file for Nothing Phone (2a) Plus (MT6886)
+#
+#<src>                                                 <mnt_point>            <type>  <mnt_flags and options>                            <fs_mgr_flags>
+system                                                 /system                erofs   ro                                                 wait,slotselect,logical,first_stage_mount,avb=vbmeta_system
+system_ext                                             /system_ext            erofs   ro                                                 wait,slotselect,logical,first_stage_mount,avb=vbmeta_system
+product                                                /product               erofs   ro                                                 wait,slotselect,logical,first_stage_mount,avb=vbmeta_system
+vendor                                                 /vendor                erofs   ro                                                 wait,slotselect,logical,first_stage_mount,avb=vbmeta_vendor
+odm                                                    /odm                   erofs   ro                                                 wait,slotselect,logical,first_stage_mount,avb=vbmeta_vendor
+vendor_dlkm                                            /vendor_dlkm           erofs   ro                                                 wait,slotselect,logical,first_stage_mount,avb=vbmeta_vendor
+odm_dlkm                                               /odm_dlkm              erofs   ro                                                 wait,slotselect,logical,first_stage_mount,avb=vbmeta_vendor
+system_dlkm                                            /system_dlkm           erofs   ro                                                 wait,slotselect,logical,first_stage_mount,avb=vbmeta_system
+
+/dev/block/by-name/metadata                            /metadata              ext4    noatime,nosuid,nodev,discard                       wait,check,formattable,first_stage_mount
+/dev/block/by-name/userdata                            /data                  f2fs    noatime,nosuid,nodev,discard,reserve_root=32768,resgid=1065,fsync_mode=nobarrier,inlinecrypt wait,check,formattable,quota,latemount,resize,checkpoint=fs,fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized,keydirectory=/metadata/vold/metadata_encryption,fsverity
+/dev/block/by-name/misc                                /misc                  emmc    defaults                                           defaults
