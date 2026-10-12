@@ -1,0 +1,55 @@
+#
+# Copyright (C) 2026 The Android Open Source Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+on early-init
+    write /proc/bootprof "INIT:early-init:pacmanpro"
+    mount debugfs debugfs /sys/kernel/debug
+
+on init
+    # Goodix / optical fingerprint nodes
+    chown system system /dev/goodix_fp
+    chmod 0660 /dev/goodix_fp
+    chown system system /sys/devices/platform/1100a000.spi/spi_master/spi0/spi0.0/authen_fd/performance
+    chmod 0660 /sys/devices/platform/1100a000.spi/spi_master/spi0/spi0.0/authen_fd/performance
+
+    # Nothing Glyph Interface LED strip sysfs nodes
+    chown system system /sys/class/leds/aw210xx_led/all_leds_effect
+    chown system system /sys/class/leds/aw210xx_led/single_led_br
+    chown system system /sys/class/leds/aw210xx_led/round_leds_br
+    chown system system /sys/class/leds/aw210xx_led/frame_leds_br
+    chmod 0660 /sys/class/leds/aw210xx_led/all_leds_effect
+    chmod 0660 /sys/class/leds/aw210xx_led/single_led_br
+    chmod 0660 /sys/class/leds/aw210xx_led/round_leds_br
+    chmod 0660 /sys/class/leds/aw210xx_led/frame_leds_br
+
+on post-fs-data
+    # Biometrics data directories
+    mkdir /data/vendor/biometrics 0770 system system
+    mkdir /data/vendor/goodix 0770 system system
+
+    # Glyph runtime state directory
+    mkdir /data/vendor/glyph 0770 system system
+
+on boot
+    # Display 120Hz dynamic refresh rate permissions
+    chown system graphics /sys/devices/platform/1c000000.dispsys/1c000000.dispsys:mtk_disp_pwm/fps_mode
+    chmod 0664 /sys/devices/platform/1c000000.dispsys/1c000000.dispsys:mtk_disp_pwm/fps_mode
+
+    # Touch boost and game mode
+    chown system system /sys/devices/platform/touchscreen/game_mode
+    chmod 0660 /sys/devices/platform/touchscreen/game_mode
+
+# Nothing Glyph AIDL Service
+service vendor.glyph-default /vendor/bin/hw/android.hardware.lights-service.nothing_glyph
+    class hal
+    user system
+    group system
+    shutdown critical
+
+# Fingerprint AIDL Service
+service vendor.fingerprint-default /vendor/bin/hw/android.hardware.biometrics.fingerprint-service.nothing
+    class hal
+    user system
+    group system input uhid
