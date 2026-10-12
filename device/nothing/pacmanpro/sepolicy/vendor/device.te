@@ -1,0 +1,4 @@
+type fingerprint_device, dev_type;
+type sysfs_fingerprint, sysfs_type, fs_type;
+type sysfs_glyph, sysfs_type, fs_type;
+type glyph_vendor_data_file, file_type, data_file_type;
