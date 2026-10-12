@@ -1,0 +1,5 @@
+service vendor.lights-nothing-glyph /vendor/bin/hw/android.hardware.lights-service.nothing_glyph
+    class hal
+    user system
+    group system
+    shutdown critical
