@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!-- Remote Repositories -->
+  <remote name="github" fetch="https://github.com/" />
+  <remote name="nothingoss" fetch="https://github.com/NothingOSS/" />
+  <remote name="aosp" fetch="https://android.googlesource.com/" />
+
+  <!-- Kernel Source for MediaTek Dimensity 7350 Pro (MT6886) -->
+  <project name="NothingOSS/android_kernel_5.15_nothing_mt6886"
+           path="kernel/nothing/mt6886"
+           remote="github"
+           revision="main" />
+
+  <!-- Device Tree for Nothing Phone (2a) Plus -->
+  <project name="custom-devices/android_device_nothing_pacmanpro"
+           path="device/nothing/pacmanpro"
+           remote="github"
+           revision="android-17" />
+
+  <!-- Vendor Blobs (Extracted from stock Nothing OS PacmanPro) -->
+  <project name="custom-vendor/android_vendor_nothing_pacmanpro"
+           path="vendor/nothing/pacmanpro"
+           remote="github"
+           revision="android-17" />
+
+  <!-- MediaTek Hardware Interface Repositories -->
+  <project name="LineageOS/android_hardware_mediatek"
+           path="hardware/mediatek"
+           remote="github"
+           revision="lineage-22.0" />
+
+  <!-- SEPolicy and Interfaces -->
+  <project name="LineageOS/android_device_mediatek_sepolicy_vndr"
+           path="device/mediatek/sepolicy_vndr"
+           remote="github"
+           revision="lineage-22.0" />
+</manifest>
