@@ -1,0 +1,16 @@
+type hal_glyph_default, domain;
+type hal_glyph_default_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(hal_glyph_default)
+
+# Allow hal_glyph_default to read and write Glyph sysfs nodes
+allow hal_glyph_default sysfs_glyph:dir r_dir_perms;
+allow hal_glyph_default sysfs_glyph:file rw_file_perms;
+
+# Allow access to glyph vendor data files
+allow hal_glyph_default glyph_vendor_data_file:dir create_dir_perms;
+allow hal_glyph_default glyph_vendor_data_file:file create_file_perms;
+
+# Binder IPC communication
+binder_use(hal_glyph_default)
+add_service(hal_glyph_default, hal_light_service)
