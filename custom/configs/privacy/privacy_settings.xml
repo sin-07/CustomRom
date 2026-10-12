@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Custom ROM Privacy Guard Configuration
+-->
+<config>
+    <!-- Enforce hardware indicators and auto-revocation -->
+    <feature name="android.software.device_admin" />
+    <feature name="android.hardware.biometrics.face" />
+    
+    <!-- Enforce clipboard access notifications -->
+    <system-config>
+        <show-clipboard-access-notification enabled="true" />
+        <auto-revoke-unused-permissions enabled="true" />
+        <sensor-privacy-indicators-enabled enabled="true" />
+    </system-config>
+</config>
