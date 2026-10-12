@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+** Copyright (C) 2026 The Android Open Source Project
+** SPDX-License-Identifier: Apache-2.0
+*/
+-->
+<resources>
+    <!-- Flag indicating whether to show notification count in status bar -->
+    <bool name="config_statusBarShowNumber">false</bool>
+
+    <!-- Biometric UDFPS illumination color and settings -->
+    <integer name="config_udfps_illumination_type">1</integer>
+
+    <!-- Status bar padding values -->
+    <dimen name="status_bar_padding_start">24dp</dimen>
+    <dimen name="status_bar_padding_end">24dp</dimen>
+    <dimen name="status_bar_padding_top">6dp</dimen>
+
+    <!-- Enable smooth screen transitions -->
+    <bool name="config_enableDisplayCutoutProtection">true</bool>
+</resources>
