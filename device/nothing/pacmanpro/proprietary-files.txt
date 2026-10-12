@@ -1,0 +1,44 @@
+# Proprietary files extracted from stock Nothing OS for Nothing Phone (2a) Plus (PacmanPro)
+# MediaTek Dimensity 7350 Pro (MT6886) Platform
+
+# Audio & SmartPA
+vendor/lib64/libaudiocompensationfilter.so
+vendor/lib64/libaudiotexture.so
+vendor/lib64/hw/audio.primary.mt6886.so
+vendor/lib64/soundfx/libaudiopreprocessing.so
+vendor/etc/audio_effects.xml
+vendor/etc/audio_policy_configuration.xml
+
+# Camera & ISP
+vendor/lib64/hw/camera.mt6886.so
+vendor/lib64/libcam.halserver.so
+vendor/lib64/libcamalgo.so
+vendor/lib64/libcamera_custom.so
+vendor/bin/hw/camerahalserver
+
+# Connectivity (BT / WiFi / GPS)
+vendor/bin/hw/android.hardware.bluetooth@1.1-service-mediatek
+vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
+vendor/firmware/WIFI_RAM_CODE_soc7_0_6886.bin
+vendor/firmware/BT_RAM_CODE_soc7_0_6886.bin
+vendor/etc/wifi/wpa_supplicant.conf
+
+# Graphics & Mali Drivers
+vendor/lib64/egl/libGLES_mali.so
+vendor/lib64/hw/gralloc.mt6886.so
+vendor/lib64/hw/hwcomposer.mt6886.so
+vendor/lib64/libvulkan_mali.so
+
+# Radio & Telephony (RIL)
+vendor/bin/hw/mtkfusionrild
+vendor/lib64/libmtk-ril.so
+vendor/lib64/librilmtk.so
+
+# Biometrics (Goodix Optical Under-Display Fingerprint)
+vendor/lib64/hw/fingerprint.goodix.so
+vendor/lib64/libfp_gf_hal.so
+vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-goodix
+
+# Power & Thermal
+vendor/bin/hw/android.hardware.thermal@2.0-service.mediatek
+vendor/etc/thermal_throttling.conf
